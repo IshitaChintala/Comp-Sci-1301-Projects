@@ -1,0 +1,36 @@
+
+public class codingLab6 {
+
+	public static void main(String [] args) {
+		//initialize variable
+		int n = 1; 
+		//start for loop (set segment = 3 - change seg<= 3 to seg <= 2 for second problem) 
+		for (int seg=1; seg<= 3; seg++) {
+			//set height to four (change to 6 for second problem)
+		for (int line = 0; line < 4; line++) {
+			//this will result in three stars in the second line instead of 2
+			for (int j = 1; j <= (2 * line + n); j++) {
+				//print star symbol
+				System.out.print("*");
+			}
+			System.out.println(""); 
+			
+		}
+		}
+			
+		}
+	}
+	
+//console: 
+//*
+//***
+//*****
+//*******
+//*
+//***
+//*****
+//*******
+//*
+//***
+//*****
+//*******
