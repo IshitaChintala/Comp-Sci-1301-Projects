@@ -1,0 +1,33 @@
+//This is my first program
+class Hello {
+
+	public static void main(String[] args) {
+		
+		System.out.println("Hello, my name is Ishita Chintala!");
+		System.out.println(shortName("Doe, John")); 
+		
+int x = 5; 
+		
+		if (x > 2) 
+
+			x = x * 2;
+
+			if (x > 4) 
+
+			x = 0;
+		
+	}
+	
+	public static String shortName(String fullName) {
+		//int p = (fullName.length())/2; 
+		//System.out.println(fullName.substring((fullName.indexOf(",")+2), (fullName.indexOf(",")+3)));
+		//return fullName;
+		return fullName.substring((fullName.indexOf(",")+2), (fullName.indexOf(",")+3)) + "." + fullName.substring(0,fullName.indexOf(","));
+}
+
+}
+
+
+//this program outputs the following in the console: 
+//Hello, my name is Ishita Chintala!
+//J.Doe
