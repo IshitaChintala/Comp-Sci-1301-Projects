@@ -1,0 +1,73 @@
+import java.util.*; 
+
+public class ninePuzzleProject{
+	
+	public static void main(String[] args) {
+	
+		//Array to assign board values
+		char[][] board = {{' ', '1', '2'}, {'3', '4', '5'}, {'6', '7', '8'}}; 
+		//call printBoard method
+		printBoard(board); 
+		
+		//scanner to prompt user to insert a value
+		Scanner scanner = new Scanner(System.in); 
+		//print next move in console
+		System.out.print("Next move: ");
+		//scanner command
+		String input = scanner.next(); 
+		
+		//initialize variables
+		int row = 0; 
+		int col = 0; 
+		//initialize square character
+		char square = input.charAt(0); 
+
+		//while loop for board display
+		//end program when user enters 0
+		while (!input.startsWith("0")) {
+			//for loop
+			loop: for (row = 0; row < 3; row++) {
+				for (col = 0; col < 3; col++) {
+					if (board[row][col] == square) {
+					//	System.out.println(board[row][col]);
+						break loop; 
+//						System.out.println(board[row][col]);	
+					}
+				}
+			}
+//System.out.println("row"+row + "col"+ col);			
+			//check conditions for playing game
+			//first loop: makes the number go up
+			if (( row > 0 && board[row-1][col] == ' ')) {
+//				System.out.println("row inside"+row + "col"+ col);		
+				board[row-1][col] = square;
+				board[row][col] = ' '; 
+				//second loop: makes the number go left/right
+			} else if (( col > 0 && board[row][col-1] == ' ')) {
+//				System.out.println("row test"+row + "col"+ col);
+				board[row][col-1] = square;
+				board[row][col] = ' '; 
+			}
+				
+//			}			
+			printBoard(board); 
+			System.out.print("Next move: "); 
+			input = scanner.next(); 
+			square = input.charAt(0);
+			
+		}
+//		}
+			
+	}
+	
+	//method to print stuff
+	public static void printBoard(char[][] b) {
+		for (int i = 0; i < b.length; i++) {
+			for (int j = 0; j < b[i].length; j++) {
+				System.out.print(b[i][j] + " ");
+			}
+			System.out.println(); 
+		}
+		System.out.println(); 
+	}
+}
