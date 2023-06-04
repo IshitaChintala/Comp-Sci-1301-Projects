@@ -1,0 +1,125 @@
+/**
+ * 
+ */
+
+/**
+ * @author ishita
+ *
+ */
+public class codingLab5 {
+	
+//public class Buzz but different file name ^^
+	
+	public static void baffle(String blimp) {
+		
+		System.out.println(blimp); 
+		zippo("ping", -5); 
+	}
+	
+	public static void zippo(String quince, int flag) { //3 and 11
+		
+		if (flag < 0) { //4 and 12
+			System.out.println(quince + " zoop"); //13
+		}
+		else { //5
+			System.out.println("ik"); //6
+			baffle(quince); //7
+			System.out.println("boo-wa-ha-ha"); //14
+		}
+	}
+	
+	public static void main(String[] args) { //1				
+		int x = 1; 
+		
+		if (x > 0 && x<10) {
+				
+			System.out.println("positive single digit number."); 
+			
+			}
+		
+		zippo("rattle", 13); //2		
+				
+		int k = 0; 
+		//ERROR: Syntax error on line: "switch (k)"
+		//ERROR fixed to: "switch (k) {" and ended block of code with "}"
+		//executes zero in console
+		
+		switch (k) {
+		case 0: 
+			System.out.println("zero"); 
+			break; 
+		case 1: 
+			System.out.println("one"); 
+			break; 
+		default: 
+			System.out.println("default"); 
+			break;
+	}
+		//ERROR: had to change "k" to "k1" for multiple use of same variable... otherwise, there was no error
+		//executes one in console
+		
+		int k1 = 0; 
+		switch (k1+1)
+		{ case 0: 
+			System.out.println("zero"); 
+			break; 
+		case 1: 
+			System.out.println("one"); 
+			break; 
+		default: 
+			System.out.println("default"); 
+			break; 
+		}
+				
+		//ERROR: ("switch k2 / 3.0) --> Cannot switch on a value of type double. Only convertible int values, strings or enum variables are permitted
+		//ERROR fixed to: "switch (k2 / 3) instead of (k2/3.0). executes to zero
+		
+		int k2 = 6; 
+		switch (k2 / 3)
+		{ case 2: 
+			System.out.println("zero"); 
+			break; 
+		  case 3: 
+			  System.out.println("one"); 
+			  break; 
+		  default: 
+			  System.out.println("default"); 
+			  break; 
+		
+		} 
+		
+		//switch statements: depending on the variable number, the case will be run
+		int flavor = 1;
+		switch (flavor) {
+		//if int flavor = 1, it will run chocolate, if 2, strawberry, if 0/3, vanilla
+			case 1: 
+				System.out.println("chocolate"); 
+			break; 
+			
+			case 2: 
+				System.out.println("strawberry"); 
+			break; 
+			
+			default: 
+				System.out.println("vanilla"); 
+			break; 
+			
+		}
+		
+		
+		}
+	
+	}
+
+// 3) "rattle", 
+// 4) "ik\rattle\ping  zoop\boo-wa-ha-ha\"
+
+//console: positive single digit number.
+//ik
+//rattle
+//ping zoop
+//boo-wa-ha-ha
+//zero
+//one
+//zero
+//chocolate
