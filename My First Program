@@ -1,0 +1,15 @@
+
+// This is my first Java Program
+// By Ishita Chintala
+
+class myFirstProgram {
+
+	public static void main(String[] args) 
+	{	
+		System.out.print( (54 + 9) / 9); 
+	}
+
+
+}
+
+//console: 7
