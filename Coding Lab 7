@@ -1,0 +1,67 @@
+
+
+public class unit7Lab {
+
+	public static void main(String[] args) {
+	
+		int[] values = {1, 2, 3, 4, 5}; 
+		
+		//declare integer values
+		double[] arr = {75, 80, 77, 79, 82}; 
+		int total = 0; 
+		//strings
+		String[] grades = {"C", "B", "C", "C", "B"}; 
+
+		//display first part of the problem in the console
+		System.out.println(values[0] + " " + arr[0] + " " + grades[0]); 
+		System.out.println(values[1] + " " + arr[1] + " " + grades[1]); 
+		System.out.println(values[2] + " " + arr[2] + " " + grades[2]); 
+		System.out.println(values[3] + " " + arr[3] + " " + grades[3]); 
+		System.out.println(values[4] + " " + arr[4] + " " + grades[4]); 
+
+		//find the average of the array	
+		//loop to find average no matter what value is inputed in array
+		for (int i = 0; i<arr.length; i++) {
+			total = (int) (total + arr[i]); 
+		}
+	
+		
+		//average formula
+		int average = total/arr.length; 
+		
+		switch (arr.length) {
+		case 0: 
+			System.out.println("70-79"); 
+			break; 
+		case 1: 
+			System.out.println("80-89"); 
+			break; 
+		case 2: 
+			System.out.println("90-99"); 
+			break; 
+		default: 
+			System.out.println("0"); 
+		}
+		
+		//display in console
+		System.out.println("The average is: " + average); 
+		
+		System.out.println("Your highest score was " + arr[4]); 
+		System.out.println("Your lowest score was " + arr[0]); 
+		System.out.println("Your final grade is " + grades[0]); 
+	
+	}
+	
+}
+
+//console: 
+//1 75.0 C
+//2 80.0 B
+//3 77.0 C
+//4 79.0 C
+//5 82.0 B
+//0
+//The average is: 78
+//Your highest score was 82.0
+//Your lowest score was 75.0
+//Your final grade is C
