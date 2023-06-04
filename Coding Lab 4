@@ -1,0 +1,70 @@
+//import scanner for inputing values
+import java.util.Scanner; 
+
+
+public class codingLab {
+
+	public static void main(String[] args) { 
+		
+		//declare variables
+		double radius = getRadius(); 
+		double sArea = (double) squareArea(radius + radius); 
+		
+		System.out.println("area of square is: "+ sArea); 
+		double cArea = circleArea(radius); 
+		System.out.println("area of circle is: "+cArea); 
+		printArea(sArea, cArea); 
+		
+	}
+
+	public static double getRadius() {
+		
+		//prompt user to enter value
+		
+		Scanner in = new Scanner(System.in); 
+		
+		System.out.println("Enter radius: "); 
+		
+		double r = in.nextDouble(); 
+	
+		return r;
+		
+		
+	}
+	
+public static double squareArea(double d) {
+		
+		//return area of a square
+		
+	return d*d; 
+		
+	}
+
+
+public static double circleArea(double radius) {
+	
+	//return area of circle
+	
+	return (double)3.14*radius*radius; 
+	
+}
+
+public static double printArea(double sArea, double ca) {
+	
+	//return area of a four-pointed star
+
+	double area = sArea-(ca); 
+	System.out.println("area of a four pointed star: "+area);
+	return area; 
+	
+}
+
+}
+	
+
+//console: for example
+//Enter radius: 
+//2
+//area of square is: 16.0
+//area of circle is: 12.56
+//area of a four pointed star: 3.4399999999999995
