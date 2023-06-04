@@ -1,0 +1,78 @@
+//Lab2 : Runner time calculations 
+public class runnerLab2 {	
+		public static void main (String args[]) {
+//defining variables and initializing lap times
+			int lapTime1= 50, lapTime2= 52, lapTime3= 49, lapTime4= 50; 
+//defining variables for total time calculations			
+			int totalTime= 0, timeMin= 0, timeSec= 0;
+//defining variables for Average time calculation
+			double avgTime = 0, tt=0; 
+			
+			var length = 0; 
+			
+//finding total time 
+			totalTime = lapTime1 + lapTime2 + lapTime3 + lapTime4; 
+//finding minutes
+			timeMin = totalTime/60;
+//finding Seconds
+			timeSec = totalTime - (timeMin * 60); 
+			
+//display average time and total time in console
+			System.out.println ("Total Time is "+ timeMin + " minutes "+timeSec+" seconds");
+
+//converting integer number to double to get average in double value format
+			tt=new Double(totalTime);
+// finding average time and display
+			avgTime=tt/4;
+			System.out.println("Total average time is " + avgTime + " seconds"); 
+			
+			String length1 = "dog";
+			
+			String firstThird = length1.substring(0, length1.length() / 3); 
+			String middleThird = length1.substring(length1.length() / 3, (length1.length() - length1.length() / 3)); 
+			String finalThird =  length1.substring(length1.length() - length1.length() / 3); 
+			System.out.println(finalThird); 
+			System.out.println(middleThird); 
+			System.out.println(firstThird); 
+		    System.out.println(finalThird + middleThird + firstThird);
+			
+		    
+		    String s1 = "Computer"; 
+		    String s2 = "Programmer"; 
+		 
+		    String firstHalf = s1.substring(0, s1.length() / 2); 
+		    String secondHalf = s2.substring(s2.length() / 2); 
+		    
+		    System.out.println(firstHalf); 
+		    System.out.println(secondHalf); 
+		    System.out.println(firstHalf + secondHalf); 
+		    
+		       
+		    
+		    String n1 = "John"; 
+		    String n2 = "Doe"; 
+		    
+		    String firstName = n1.substring(0, n1.length()/3);  
+		    String lastName = n2.substring(n2.length()/4);
+		    
+		    System.out.println(firstName); 
+		    System.out.println(lastName); 
+		    System.out.println(firstName + lastName); 
+		    
+		    System.out.println("3+5 = "+3+5)
+;		}}
+		    
+//console: 
+//Total Time is 3 minutes 21 seconds
+//Total average time is 50.25 seconds
+//g
+//o
+//d
+//god
+//Comp
+//ammer
+//Compammer
+//J
+//Doe
+//JDoe
+//3+5 = 35
